@@ -38,17 +38,14 @@
             }
         ];
 
-        function showInformation() {
-            const mainContent = document.getElementById('main-content');
-            mainContent.innerHTML = ''; 
-            const infoDiv = document.createElement('div');
-            infoDiv.innerHTML = '<img src="info-logo.png" alt="Info Logo"><h2>Title of Information</h2><p>Description of information goes here.</p>';
-            mainContent.appendChild(infoDiv);
+     function showInformation() {
+    const mainContent = document.getElementById('main-content');
+    mainContent.innerHTML = ''; // Clear main content
+    const infoDiv = document.createElement('div');
+    infoDiv.innerHTML = '<img src="info-logo.png" alt="Info Logo"><h2>Title of Information</h2><p>Description of information goes here.</p>';
+    mainContent.appendChild(infoDiv);
+}
 
-     
-            document.getElementById('informationsBtn').style.display = 'none';
-            document.getElementById('beitraegeBtn').style.display = 'none';
-        }
 
         function showArticles() {
             const mainContent = document.getElementById('main-content');
