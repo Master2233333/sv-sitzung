@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* Common styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    max-width: 100%; /* Ensure the logo scales with the screen size */
+    margin-bottom: 10px; /* Add spacing between logo and buttons */
+    
+}
+
+.buttons {
+    display: flex;
+    background-color: #000000;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.header-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #979797;
+    color: #000000;
+    font: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.header-button:hover {
+    background-color: #000000;
+}
+
+main {
+    max-width: 1000px; /* Ensure content doesn't stretch too wide on larger screens */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article {
+    margin-bottom: 40px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align elements to the left */
+    background-color: #000; /* Set the background color to black */
+}
+
+.article img {
+    max-width: 100%; /* Allow the image to take the full width of the article box */
+    height: auto;
+    margin-bottom: 20px; /* Add spacing between image and text */
+}
+
+.article-content {
+    flex: 1;
+    max-width: 100%; /* Allow the text to take the full width of the article box */
+    color: #000000; /* Set the text color to white */
+    color: #000000;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 0;
+    color: #ffffff;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+footer {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.view-button:hover {
+    background-color: #555;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for screens up to 768px wide */
+    header {
+        padding: 10px;
+    }
+
+    .header-button {
+        padding: 8px 15px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .article {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust styles for screens up to 480px wide (e.g., smartphones) */
+    header {
+        padding: 5px;
+    }
+
+    .header-button {
+        padding: 5px 10px;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    .article {
+        padding: 10px;
+    }
+}
