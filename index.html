@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SV - Sitzung Updates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="freiherr.png" alt="Your Logo">
+        <div class="buttons">
+            <button class="header-button" id="informationsBtn" onclick="showInformation()">Informations</button>
+            <button class="header-button" id="beitraegeBtn" onclick="showArticles()">Beiträge</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    </main>
+
+    <script>
+       
+        const articles = [
+            {
+                title: "SV - Sitzung",
+                shortDescription: "In diesem Beitrag handelt es sich um das Tragen von Jogginghosen, das Entlassungssystem und Veränderungen in der Schule.",
+                longDescription: "Dies ist die ausführliche Beschreibung des Beitrags über das Tragen von Jogginghosen, das Entlassungssystem und Veränderungen in der Schule.",
+                author: "Mahmoud Bankousli, 31.08.23",
+                imageSrc: "beitrag2.png"
+            },
+            {
+                title: "SV - Sitzung",
+                shortDescription: "Dieser Beitrag handelt von der Wahl des Schulsprechers/der Schulsprecherin sowie von Schul-, Teil- und Fachkonferenzen.",
+                longDescription: "Dies ist die ausführliche Beschreibung des Beitrags über die Wahl des Schulsprechers/der Schulsprecherin sowie von Schul-, Teil- und Fachkonferenzen.",
+                author: "Mahmoud Bankousli, 24.08.23",
+                imageSrc: "beitrag1.jpeg"
+            }
+        ];
+
+        function showInformation() {
+            const mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = ''; 
+            const infoDiv = document.createElement('div');
+            infoDiv.innerHTML = '<img src="info-logo.png" alt="Info Logo"><h2>Title of Information</h2><p>Description of information goes here.</p>';
+            mainContent.appendChild(infoDiv);
+
+     
+            document.getElementById('informationsBtn').style.display = 'none';
+            document.getElementById('beitraegeBtn').style.display = 'none';
+        }
+
+        function showArticles() {
+            const mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = ''; 
+
+         
+            for (const article of articles) {
+                const articleDiv = document.createElement('section');
+                articleDiv.className = 'article';
+
+                articleDiv.innerHTML = `
+                    <img src="${article.imageSrc}" alt="Article Image">
+                    <h2>${article.title}</h2>
+                    <p>${article.shortDescription}</p>
+                    <footer>
+                        <p>Beitrag von ${article.author}</p>
+                    </footer>
+                    <button class="view-button" onclick="showArticle('${article.imageSrc}', '${article.title}', '${article.longDescription}')">Anschauen</button>
+                `;
+
+                mainContent.appendChild(articleDiv);
+            }
+
+ 
+            document.getElementById('informationsBtn').style.display = 'inline-block';
+            document.getElementById('beitraegeBtn').style.display = 'inline-block';
+        }
+
+        function showArticle(imageSrc, title, description) {
+            const mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = '';
+
+            const articleDiv = document.createElement('section');
+            articleDiv.className = 'article';
+
+            articleDiv.innerHTML = `
+                <img src="${imageSrc}" alt="Article Image">
+                <h2>${title}</h2>
+                <p>${description}</p>
+                <button class="view-button" onclick="showArticles()">Back to Articles</button>
+            `;
+
+            mainContent.appendChild(articleDiv);
+
+
+            document.getElementById('informationsBtn').style.display = 'none';
+            document.getElementById('beitraegeBtn').style.display = 'none';
+        }
+
+
+        showArticles();
+    </script>
+</body>
+</html>
