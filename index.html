@@ -39,13 +39,14 @@
             }
         ];
 
-     function showInformation() {
+    function showInformation() {
     const mainContent = document.getElementById('main-content');
     mainContent.innerHTML = ''; // Clear main content
     const infoDiv = document.createElement('div');
-   infoDiv.innerHTML = '<img src="freiherr.png" alt="Info Logo"><h2>Informationen</h2><p>Hallo, ich bin der Klassensprecher Mahmoud Bankousli aus der 8d. Ich bearbeite diese Beiträge, um meine Klasse darüber zu informieren, was in einer SV-Sitzung besprochen wurde.</p>';
+    infoDiv.innerHTML = '<img src="freiherr.png" alt="Info Logo" class="info-logo"><h2>Informationen</h2><p>Hallo, ich bin der Klassensprecher Mahmoud Bankousli aus der 8d. Ich bearbeite diese Beiträge, um meine Klasse darüber zu informieren, was in einer SV-Sitzung besprochen wurde.</p>';
     mainContent.appendChild(infoDiv);
 }
+
 
 
         function showArticles() {
