@@ -115,7 +115,10 @@ footer {
     main {
         padding: 10px;
     }
-
+    header img {
+        max-width: 80%; /* Reduce the logo width for smaller screens */
+    }
+    
     .article {
         padding: 20px;
     }
@@ -125,7 +128,10 @@ footer {
     header {
         padding: 5px;
     }
-
+    header img {
+        max-width: 80%; /* Reduce the logo width for smaller screens */
+    }
+    
     .header-button {
         padding: 5px 10px;
     }
