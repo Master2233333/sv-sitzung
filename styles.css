@@ -256,7 +256,7 @@ footer {
     }
     
     header img {
-        max-width: 60%; /* Adjust the logo width for smaller screens */
+        max-width: 50%; /* Reduce the logo width for smaller screens */
     }
     
     .header-button {
@@ -271,5 +271,4 @@ footer {
         padding: 10px;
     }
 }
-
 
