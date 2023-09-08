@@ -102,7 +102,7 @@ footer {
     background-color: #555;
 }
 .info-logo {
-    max-width: 50%; /* Adjust the percentage as needed */
+    max-width: 100%; /* Adjust the percentage as needed */
 }
 
 /* Media queries for responsiveness */
