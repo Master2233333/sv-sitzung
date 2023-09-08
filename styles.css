@@ -101,6 +101,9 @@ footer {
 .view-button:hover {
     background-color: #555;
 }
+.info-logo {
+    max-width: 50%; /* Adjust the percentage as needed */
+}
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
@@ -122,6 +125,7 @@ footer {
     .article {
         padding: 20px;
     }
+
 }
 
 /* Common styles for all screen sizes */
